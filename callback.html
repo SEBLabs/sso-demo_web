@@ -1,0 +1,26 @@
+<html>
+  <script src="libs/jStorage/jstorage.min.js"></script>
+  <script>
+    (function () {
+      'use strict';
+			function getParameterByName(name, url) {
+				if (!url) url = window.location.href;
+				name = name.replace(/[\[\]]/g, "\\$&");
+				var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+					results = regex.exec(url);
+				if (!results) return null;
+				if (!results[2]) return '';
+				return decodeURIComponent(results[2].replace(/\+/g, " "));
+			};
+
+			var token = getParameterByName('access_token');
+			if(token){
+				$.jStorage.set('token', token);
+				window.location = 'logado.html';
+      }else{
+				alert('Nenhum token fornecido, por favor tente logar novamente!');
+				window.location = 'http://demo-app.sso.seb-pd.com.br';
+			}
+		})();
+  </script>
+</html>

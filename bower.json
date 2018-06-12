@@ -1,0 +1,21 @@
+{
+  "name": "seb-sso_demo-web",
+  "authors": [
+    "@cleiton_tav"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "components-bootstrap": "3.3.7",
+    "jStorage": "^0.4.12"
+  }
+}
